@@ -4,7 +4,7 @@
   "description": "The point of this repo is to setup TypeScript with Selenium for PoC reasons",
   "main": "index.js",
   "scripts": {
-    "test": "npx tsc && npx mocha testsJS/test.js && npx allure serve allure-results"
+    "test": "npm install && npx tsc && npx mocha testsJS/test.js && npx allure serve allure-results"
   },
   "mocha": {
     "require": "esm",
