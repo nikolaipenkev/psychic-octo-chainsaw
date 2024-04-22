@@ -1,0 +1,24 @@
+{
+  "name": "psychic-octo-chainsaw",
+  "version": "1.0.0",
+  "description": "The point of this repo is to setup TypeScript with Selenium for PoC reasons",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/chai": "^4.3.14",
+    "@types/mocha": "^10.0.6",
+    "@types/selenium-webdriver": "^4.1.22",
+    "chai": "4.2.0",
+    "mocha": "^10.4.0",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "esm": "^3.2.25",
+    "selenium-webdriver": "^4.19.0"
+  }
+}
