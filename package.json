@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "npx tsc ",
-    "test": "npx mocha testsJS/test.js"
+    "test": "npx mocha testsJS/*.js"
   },
   "mocha": {
     "require": "esm",
