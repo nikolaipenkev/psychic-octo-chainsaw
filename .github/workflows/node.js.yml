@@ -31,7 +31,7 @@ jobs:
         run: npm test && npm install -g allure-commandline && allure generate allure-results --clean -o allure-report
 
       - name: Copy Allure Results
-        run: cp -r allure-results $GITHUB_WORKSPACE/allure-results
+        run: cp -r allure-results
 
       - name: Publish Allure Reports to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
