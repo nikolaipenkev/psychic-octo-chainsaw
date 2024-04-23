@@ -19,7 +19,7 @@ jobs:
           node-version: '14'
 
       - name: Install dependencies
-        run: npm init && npm install && npm cache verify && npm run build --if-present
+        run: npm install && npm cache verify && npm run build --if-present
 
       - name: Install Chrome
         run: |
