@@ -8,7 +8,7 @@ describe('Example Test Suite', () => {
     before(async function() {
         this.timeout(10000);
         try {
-            const chromeOptions = new Options().addArguments('headless');
+            const chromeOptions = new Options().addArguments('--headless --no-sandbox --disable-dev-shm-usage --disable-gpu --window-size=1920,1080');
             const capabilities = Capabilities.chrome().merge(chromeOptions);
             driver = await new Builder()
                 .withCapabilities(capabilities)
