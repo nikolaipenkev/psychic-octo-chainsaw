@@ -32,8 +32,7 @@ jobs:
 
       - name: Copy Allure Results
         run: |
-          mkdir -p allure-report
-          cp -r allure-results/. allure-report
+          rsync -av allure-results/. allure-report
 
       - name: Publish Allure Reports to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
