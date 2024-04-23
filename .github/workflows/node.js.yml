@@ -36,8 +36,5 @@ jobs:
           chmod +x chromedriver
           sudo mv chromedriver /usr/local/bin
 
-      - name: Build TypeScript
-        run: npm run build
-
       - name: Run Tests
         run: npm test
