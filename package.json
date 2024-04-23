@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "npx tsc ",
-    "test": "npx mocha testsJS/test.js && npx allure serve allure-results"
+    "test": "npx mocha testsJS/test.js"
   },
   "mocha": {
     "require": "esm",
