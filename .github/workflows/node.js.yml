@@ -23,8 +23,3 @@ jobs:
 
       - name: Run Tests
         run: npm test
-
-      - name: Publish Allure Report
-        uses: allure-framework/allure2@2.13.8
-        with:
-          results: allure-results
