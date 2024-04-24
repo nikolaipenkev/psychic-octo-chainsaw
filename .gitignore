@@ -132,3 +132,4 @@ dist
 # Local Testing
 allure-results/
 testsJS/
+.idea/
