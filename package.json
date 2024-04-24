@@ -4,7 +4,7 @@
   "description": "The point of this repo is to setup TypeScript with Selenium for PoC reasons",
   "main": "index.js",
   "scripts": {
-    "build": "npx tsc tests",
+    "build": "npx tsc",
     "test": "npx mocha testsJS/tests/*.js"
   },
   "mocha": {
