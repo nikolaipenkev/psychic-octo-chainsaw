@@ -1,0 +1,1 @@
+[{"uid":"3b3dc25bcabf95f4","name":"should open Google homepage","time":{"start":1713985358174,"stop":1713985359368,"duration":1194},"status":"passed","severity":"normal"},{"uid":"99ffcee799b53b59","name":"should open landing page homepage","time":{"start":1713985356629,"stop":1713985357920,"duration":1291},"status":"passed","severity":"normal"}]
