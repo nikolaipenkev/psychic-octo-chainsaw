@@ -13,7 +13,7 @@ describe('Example Test Suite', () => {
             const capabilities = Capabilities.chrome().merge(chromeOptions);
             driver = await new Builder()
                 .withCapabilities(capabilities)
-                .build();
+                .build()
         } catch (error) {
             console.error('Error initializing WebDriver:', error);
             throw error;

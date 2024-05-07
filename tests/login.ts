@@ -1,23 +1,20 @@
-import { Builder, Capabilities, WebDriver } from 'selenium-webdriver';
-import { Options } from 'selenium-webdriver/chrome';
+import { WebDriver } from 'selenium-webdriver';
 import { expect } from 'chai';
 import { describe, it, before, after } from 'mocha';
 import { LoginPage } from "../PoM/LoginPage";
 import {config} from "../Data/config";
-
+import {Pages} from '../PoM/pages';
+import axios from "axios";
 
 describe('Login Test', () => {
     let driver: WebDriver;
+    let page: Pages;
 
     before(async function () {
         this.timeout(10000);
         try {
-            const chromeOptions = new Options().addArguments('--headless');
-            const capabilities = Capabilities.chrome().merge(chromeOptions);
-            driver = await new Builder()
-                .withCapabilities(capabilities)
-                .build();
-        } catch (error) {
+            driver = await page.createHeadlessChrome();
+            } catch (error) {
             console.error('Error initializing WebDriver:', error);
             throw error;
         }
@@ -38,6 +35,24 @@ describe('Login Test', () => {
             expect(inventory).to.equal(config.urls.inventoryPage);
         } catch (error) {
             console.error('Error opening Google homepage:', error);
+        }
+    });
+
+    it('should open inventory page', async function () {
+        this.timeout(10000);
+        try {
+            const response = await axios.get('https://jsonplaceholder.typicode.com/users/1');
+
+            expect(response.status).to.equal(200);
+
+            const user = response.data;
+            expect(user.id).to.equal(1);
+            expect(user.name).to.equal('Leanne Graham');
+            expect(user.username).to.equal('Bret');
+            expect(user.email).to.equal('Sincere@april.biz');
+
+        } catch (error) {
+           expect(error).to.be.null;
         }
     });
 

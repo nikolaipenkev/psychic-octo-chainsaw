@@ -1,7 +1,7 @@
 import {WebDriver} from 'selenium-webdriver';
-import {Page} from './pages';
+import {Pages} from './pages';
 
-export class LoginPage extends Page {
+export class LoginPage extends Pages {
 
     constructor(driver: WebDriver, url: string, config: { [Identifier: string]: any }) {
         super(driver, url, config);
